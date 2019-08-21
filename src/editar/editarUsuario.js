@@ -7,10 +7,7 @@ import '../css/estilos.css'
 import '../css/bootstrap.min.css'
 import '../css/menu.css'
 
-class editar extends React.Component {
-
-
-
+class editarUsuario extends React.Component {
 
   render() {
     return (
@@ -92,4 +89,4 @@ const fondoBoton = {
 
 }
 
-export default editar;
+export default editarUsuario;

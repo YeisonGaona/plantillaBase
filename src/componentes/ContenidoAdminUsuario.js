@@ -11,10 +11,10 @@ import { Button } from 'reactstrap';
 
 //componentes
 import Barra from './BarraDirecciones.js'
-import PopUp from './PopUp.js'
+import PopUpUsuario from './PopUpUsuario.js'
 import Fila from './Fila.js'
 
-class Contenido extends React.Component {
+class ContenidoAdminUsuario extends React.Component {
 
 	state = {
 		post: []
@@ -66,9 +66,9 @@ class Contenido extends React.Component {
 		return (
 			<div>
 				<div class="text-left titulo" style={estiloLetrero}>
-					<h4>Lista de modulos</h4>
+					<h4>Administrar usuarios</h4>
 				</div>
-				<Barra texto="Inicio > Administracion de usuarios"/>
+				<Barra texto="Inicio > Administración de usuarios"/>
 				<div className="col-sm-12" style={{
 					paddingTop: "20px",
 					paddingRight: "46px",
@@ -91,7 +91,7 @@ class Contenido extends React.Component {
 				}}>
 					<div className="container shadow" style={fondoBarraSuperior}>
 						<br />
-						<PopUp funcion={this.anadirTarea}/>
+						<PopUpUsuario funcion={this.anadirTarea}/>
 						<br />
 						<div className="jumbotron p-1 jumbotron-fluid" style={fondoTabla}>
 							<table className="table table-hover table-bordered table-checkable" style={fondoBarraSuperior}>
@@ -146,4 +146,4 @@ const fondoTabla = {
 }
 
 
-export default Contenido;
+export default ContenidoAdminUsuario;

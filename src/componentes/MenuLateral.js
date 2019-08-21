@@ -42,7 +42,7 @@ class MenuLateral extends React.Component {
 					</div>
 				</div>
 				<li className="nav-item">
-					<a href="inicio.html" name="hoverInicio" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
+					<a href="/" name="hoverInicio" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
 					 style={ this.state.hoverInicio ? fondoHover : fondoMenuLateral } >
 						<img src={home} alt="" width="27" height="27" />
 						<br />
@@ -50,7 +50,7 @@ class MenuLateral extends React.Component {
 					</a>
 				</li>
 				<li className="nav-item">
-					<a href="administrarUsuario.html" name="hoverUsuario" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
+					<a href="/AdminUsuario" name="hoverUsuario" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
 					 style={ this.state.hoverUsuario ? fondoHover : fondoMenuLateral }>
 						<img src={persona} alt="" width="30" height="30" />
 						<br />
@@ -58,7 +58,7 @@ class MenuLateral extends React.Component {
 					</a>
 				</li>
 				<li className="nav-item">
-					<a href="administrarModulo.html" name="hoverModulo" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center" 
+					<a href="/AdminModulo" name="hoverModulo" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center" 
 					style={ this.state.hoverModulo ? fondoHover : fondoMenuLateral }>
 						<img src={modulo} alt="" width="30" height="30" />
 						<br />
@@ -66,7 +66,7 @@ class MenuLateral extends React.Component {
 					</a>
 				</li>
 				<li className="nav-item">
-					<a href="administrarActividad.html" name="hoverActividad" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
+					<a href="/AdminActividad" name="hoverActividad" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
 					style={ this.state.hoverActividad ? fondoHover : fondoMenuLateral } >
 						<img src={bombillo} alt="" width="30" height="30" />
 						<br />
@@ -74,7 +74,7 @@ class MenuLateral extends React.Component {
 					</a>
 				</li>
 				<li className="nav-item">
-					<a href="reportes.html" name="hoverReportes" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff}   className="list-group-item list-group-item-action text-light text-center" 
+					<a href="/Reportes" name="hoverReportes" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff}   className="list-group-item list-group-item-action text-light text-center" 
 					style={ this.state.hoverReportes ? fondoHover : fondoMenuLateral }>
 						<img src={documento} alt="" width="30" height="30" />
 						<br />
