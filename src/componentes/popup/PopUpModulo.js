@@ -6,10 +6,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
 //estilos
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
@@ -113,8 +113,8 @@ class ModalExample extends React.Component {
 
 const fondoBoton = {
   background: "#ec671d",
-  fontSize: "14px",
-  fontFamily: "Open sans, sans-serif"
+  fontSize: "13px",
+  fontFamily: "sans-serif"
 
 }
 

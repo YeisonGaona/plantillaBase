@@ -1,10 +1,10 @@
 import React from 'react';
 
 //Archivos css necesarios
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -13,7 +13,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Button, UncontrolledPopover, PopoverBody } from 'reactstrap';
 
 //imagenes
-import persona from '../imagenes/icono-persona.png'
+import persona from '../../imagenes/icono-persona.png'
 
 
 class BarraSuperior extends React.Component {
@@ -36,20 +36,19 @@ class BarraSuperior extends React.Component {
 												<PopoverBody>
 													<Button id="cambiarContra" className="col-md-12 text-dark" type="button" style={botones} >Cambiar contraseña</Button>
 													<Button id="cerrarSesion" className="col-md-12 text-dark" type="button" style={botones}>Cerrar sesion</Button>
-
 												</PopoverBody>
 											</UncontrolledPopover>
 											<img src={persona} alt="" width="30" height="30" />
-											<span className="username username-hide-on-mobile text-dark"> Pepito perez </span>
+											<span className="username username-hide-on-mobile text-dark letra"> Pepito perez </span>
 											<Button id="PopoverFocus" className="dropdown-toggle text-dark" type="button" style={{ background: "none", border: "0px" }}></Button>
 
 										</li>
-										<ul class="dropdown-menu dropdown-menu-default">
+										<ul className="dropdown-menu dropdown-menu-default">
 											<li>
 												<a href="login.html" className="small"> Cambiar contraseña </a>
 											</li>
 											<li>
-												<a href="cerrar" class="small"> Cerrar sesión </a>
+												<a href="cerrar" className="small"> Cerrar sesión </a>
 											</li>
 										</ul>
 									</div>

@@ -1,7 +1,10 @@
 
 /**
 Transicion de boton**/
-
+.letra{
+	font-size: 13px;
+	font-family: sans-serif
+}
 .clasehover {
 	background-color: #26344B;
 	background: #26344B;

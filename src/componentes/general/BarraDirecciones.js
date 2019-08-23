@@ -1,17 +1,13 @@
 import React from 'react';
 
 import "reactjs-popup";
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 
 class BarraDeDireccion extends React.Component {
-
-
-
-
     render() {
         return (
             <div style={{

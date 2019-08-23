@@ -1,19 +1,20 @@
 import React from 'react';
 
 //Menu lateral, superior y contenido de inicio
-import MenuSuperior from "./componentes/MenuBlancoSuperior.js"
-import MenuLateral from "./componentes/MenuLateral.js"
-import Inicio from "../src/general/Inicio.js"
+import MenuSuperior from "./componentes/menu/MenuBlancoSuperior.js"
+import MenuLateral from "./componentes/menu/MenuLateral.js"
+import Inicio from "./componentes/general/Inicio.js"
 
 //administrar usuario
-import EditarUsuario from './editar/editarUsuario.js'
-import AdminUsuario from '../src/administrar/AdminUsuario.js'
+import EditarUsuario from './componentes/editar/editarUsuario.js'
+import AsignarActividadUsuario from './componentes/asignar/AsignarActividadUsuario.js'
 
 //administrar modulo
-import AdminModulo from '../src/administrar/AdminModulo.js'
-import EditarModulo from './editar/editarModulo.js';
-import AsignarActividadModulo from './asignar/asignarActividadModulo.js';
+import AdminModulo from './componentes/administrar/ContenidoAdminModulo.js'
+import EditarModulo from './componentes/editar/editarModulo.js';
+import AsignarActividadModulo from './componentes/asignar/asignarActividadModulo.js';
 
+import RedireccionarUsuario from './componentes/redirecciones/RedireccionarUsuario.js';
 
 
 //estilos
@@ -26,6 +27,17 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 
 class App extends React.Component{
 
+
+	state={
+		usuarioModificar: ''
+	}
+
+	asignarUsuario=(usuario)=>{
+		console.log(usuario);
+		this.setState({
+			usuarioModificar:usuario
+		})
+	}
 
 render(){
   return (
@@ -45,7 +57,7 @@ render(){
 	{/*Ruta para administrar usuario*/}
   	<Route exact path="/AdminUsuario" render={() => {
   	    return <div id="wrapper">
-        <AdminUsuario/>
+		<RedireccionarUsuario funcionModificar={this.asignarUsuario}/>
     </div>
   	}}>
   	</Route>
@@ -53,10 +65,20 @@ render(){
 	{/*Ruta para editar usuario*/}
   	<Route exact path="/editarUsuario" render={() => {
   	    return <div id="wrapper">
-  	    <EditarUsuario/>
+  	    <EditarUsuario cedula={this.state.usuarioModificar}/>
     </div>
   	}}>
   	</Route>
+
+
+	{/*Ruta para asignar actividad a usuario */}
+	<Route exact path="/asignarActividadUsuario" render={() => {
+	 	return <div id="wrapper">
+	 		<AsignarActividadUsuario/>
+		</div>
+ 	}}>
+ 	</Route>
+
 
 	{/* Ruta para administrar Modulo */}
 	 <Route exact path="/AdminModulo" render={() => {

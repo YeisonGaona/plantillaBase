@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
@@ -66,13 +66,9 @@ class ModalExample extends React.Component {
 
 
   onChange = (evento) => {
-    console.log([evento.target.name]);
     this.setState({
-
       [evento.target.name]: evento.target.value
-
     });
-    console.log(this.state);
   }
 
 
@@ -133,7 +129,7 @@ class ModalExample extends React.Component {
                   </div>
                   <div className="col-sm-6">
                     <div className="input-group dates">
-                      <input type="date" onChange={this.onChange} name="fechaNacimiento" value={this.state.fechaNacimiento} id="user1" className="form-control" readonly />
+                      <input type="date" onChange={this.onChange} name="fechaNacimiento" value={this.state.fechaNacimiento} id="user1" className="form-control" readOnly />
                     </div>
                   </div>
                 </div>

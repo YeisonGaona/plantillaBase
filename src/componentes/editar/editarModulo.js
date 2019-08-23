@@ -1,16 +1,16 @@
 import React from 'react';
 
 //estilos
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 import { Button } from 'reactstrap';
 
 
 //componentes
-import Barra from '../componentes/BarraDirecciones.js'
+import Barra from '../general/BarraDirecciones';
 
 class EditarModulo extends React.Component{
 

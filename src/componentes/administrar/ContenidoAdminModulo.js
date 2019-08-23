@@ -1,19 +1,18 @@
 import React from 'react';
 
 //estilos
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 import { Button } from 'reactstrap';
 
 
 //componentes
-import Barra from './BarraDirecciones.js'
-import PopUpModulo from './PopUpModulo.js'
-import Fila from './Fila.js'
-
+import Barra from '../general/BarraDirecciones.js'
+import PopUpModulo from '../popup/PopUpModulo.js'
+import Fila from '../general/FilaTablaUsuario.js'
 
 class ContenidoAdminModulo extends React.Component {
 
@@ -79,7 +78,7 @@ class ContenidoAdminModulo extends React.Component {
 					<div className="input-group">
 						<input type="text" style={{fontSize:"14px"}}  className="form-control" placeholder="" />
 						<span className="input-group-btn">
-						<Button style={fondoBoton}>Buscar</Button>
+						<Button className="" style={fondoBoton}>Buscar</Button>
 						</span>
 					</div>
 				</div>
@@ -98,11 +97,11 @@ class ContenidoAdminModulo extends React.Component {
 							<table className="table table-hover table-bordered table-checkable" style={fondoBarraSuperior}>
 								<thead className="table table-hover table-striped col-md-12">
 									<tr>
-										<th> Logo </th>
-										<th> Nombre de modulo </th>
-										<th> Descripción </th>
-										<th> Estado </th>
-										<th> Acciones </th>
+										<th className="letra"> Logo </th>
+										<th className="letra"> Nombre de modulo </th>
+										<th className="letra"> Descripción </th>
+										<th className="letra"> Estado </th>
+										<th className="letra"> Acciones </th>
 									</tr>
 								</thead>
 								<tbody>

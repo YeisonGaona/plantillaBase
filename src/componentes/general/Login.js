@@ -1,11 +1,11 @@
 import React from 'react';
 
 //estilos
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
-import '../css/registro.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
+import '../../css/registro.css'
 
 class Login extends React.Component {
 	render() {

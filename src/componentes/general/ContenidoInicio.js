@@ -1,17 +1,17 @@
 import React from 'react';
 
 //estilos
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 import { Button } from 'reactstrap';
 
 
 //componentes
-import Barra from './BarraDirecciones.js'
-import Fila from './Fila.js'
+import Barra from '../general/BarraDirecciones.js'
+import Fila from './FilaTablaUsuario.js'
 
 class ContenidoInicio extends React.Component {
 
@@ -67,7 +67,7 @@ class ContenidoInicio extends React.Component {
 				<div class="text-left titulo" style={estiloLetrero}>
 					<h4>Lista de modulos</h4>
 				</div>
-				<Barra texto="Inicio > "/>
+				<Barra texto="Inicio  "/>
 				<div className="col-sm-12" style={{
 					paddingTop: "20px",
 					paddingRight: "46px",

@@ -1,18 +1,18 @@
 import React from 'react';
 
 //estilos
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 //imagenes
-import home from '../imagenes/icon-home.png';
-import persona from '../imagenes/icono-persona.png'
-import modulo from '../imagenes/icono-modulo.png'
-import bombillo from '../imagenes/icono-bombillo.png'
-import documento from '../imagenes/icono-doc.png'
-import logo from '../imagenes/logo.png'
+import home from '../../imagenes/icon-home.png';
+import persona from '../../imagenes/icono-persona.png'
+import modulo from '../../imagenes/icono-modulo.png'
+import bombillo from '../../imagenes/icono-bombillo.png'
+import documento from '../../imagenes/icono-doc.png'
+import logo from '../../imagenes/logo.png'
 
 
 class MenuLateral extends React.Component {
@@ -44,7 +44,7 @@ class MenuLateral extends React.Component {
 				<li className="nav-item">
 					<a href="/" name="hoverInicio" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
 					 style={ this.state.hoverInicio ? fondoHover : fondoMenuLateral } >
-						<img src={home} alt="" width="27" height="27" />
+						<img src={home} alt="" width="25" height="25" />
 						<br />
 						<span className="title">Inicio</span>
 					</a>
@@ -52,7 +52,7 @@ class MenuLateral extends React.Component {
 				<li className="nav-item">
 					<a href="/AdminUsuario" name="hoverUsuario" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
 					 style={ this.state.hoverUsuario ? fondoHover : fondoMenuLateral }>
-						<img src={persona} alt="" width="30" height="30" />
+						<img src={persona} alt="" width="25" height="25" />
 						<br />
 						<span className="title">Administrar usuario</span>
 					</a>
@@ -60,7 +60,7 @@ class MenuLateral extends React.Component {
 				<li className="nav-item">
 					<a href="/AdminModulo" name="hoverModulo" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center" 
 					style={ this.state.hoverModulo ? fondoHover : fondoMenuLateral }>
-						<img src={modulo} alt="" width="30" height="30" />
+						<img src={modulo} alt="" width="25" height="25" />
 						<br />
 						<span className="title">Administrar modulo</span>
 					</a>
@@ -68,7 +68,7 @@ class MenuLateral extends React.Component {
 				<li className="nav-item">
 					<a href="/AdminActividad" name="hoverActividad" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff} className="list-group-item list-group-item-action text-light text-center"
 					style={ this.state.hoverActividad ? fondoHover : fondoMenuLateral } >
-						<img src={bombillo} alt="" width="30" height="30" />
+						<img src={bombillo} alt="" width="25" height="25" />
 						<br />
 						<span className="title">Administrar actividad</span>
 					</a>
@@ -76,9 +76,9 @@ class MenuLateral extends React.Component {
 				<li className="nav-item">
 					<a href="/Reportes" name="hoverReportes" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff}   className="list-group-item list-group-item-action text-light text-center" 
 					style={ this.state.hoverReportes ? fondoHover : fondoMenuLateral }>
-						<img src={documento} alt="" width="30" height="30" />
+						<img src={documento} alt="" width="25" height="25" />
 						<br />
-						<span className="title">Reportes</span>
+						<span className="title letra">Reportes</span>
 					</a>
 				</li>
 			</div>

@@ -1,31 +1,24 @@
 import React from 'react';
 
 //estilos
-import '../css/business-casual.css'
-import '../css/estilos.css'
-import '../css/bootstrap.min.css'
-import '../css/menu.css'
+import '../../css/business-casual.css'
+import '../../css/estilos.css'
+import '../../css/bootstrap.min.css'
+import '../../css/menu.css'
 
 import { Button } from 'reactstrap';
 
 
 //componentes
-import Barra from './BarraDirecciones.js'
-import PopUpUsuario from './PopUpUsuario.js'
-import Fila from './Fila.js'
+import Barra from '../general/BarraDirecciones.js'
+import PopUpUsuario from '../popup/PopUpUsuario.js'
+import Fila from '../general/FilaTablaUsuario.js'
 
 class ContenidoAdminUsuario extends React.Component {
 
 	state = {
 		post: []
 	}
-
-	eventoBorrado = (evento) => {
-		evento.preventDefault();
-		console.log(this.state.post)
-	}
-
-
 
 	onChange = (evento) => {
 		this.setState({
@@ -43,9 +36,10 @@ class ContenidoAdminUsuario extends React.Component {
 
 	renderTableData() {
 		return this.state.post.map((post, index) => {
+			
 			const { cedula} = post //destructuring
 			return (
-				<Fila usuario={post} key={cedula} />
+				<Fila usuario={post} cambiar={this.props.cambiar} funcionModificar={this.props.funcionModificar} key={cedula} />
 			)
 		})
 
@@ -55,7 +49,8 @@ class ContenidoAdminUsuario extends React.Component {
 		const nuevaTarea = {
 			nombre: nombre,
 			correo: correo,
-			cedula: cedula
+			cedula: cedula,
+			estado: "Activo"
 		}
 		this.setState({
 			post: [...this.state.post, nuevaTarea]
@@ -65,7 +60,7 @@ class ContenidoAdminUsuario extends React.Component {
 	render() {
 		return (
 			<div>
-				<div class="text-left titulo" style={estiloLetrero}>
+				<div className="text-left titulo" style={estiloLetrero}>
 					<h4>Administrar usuarios</h4>
 				</div>
 				<Barra texto="Inicio > Administración de usuarios"/>
