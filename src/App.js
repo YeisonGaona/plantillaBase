@@ -3,7 +3,7 @@ import React from 'react';
 //Menu lateral, superior y contenido de inicio
 import MenuSuperior from "./componentes/menu/MenuBlancoSuperior.js"
 import MenuLateral from "./componentes/menu/MenuLateral.js"
-import Inicio from "./componentes/general/Inicio.js"
+import Inicio from "./componentes/general/ContenidoInicio.js"
 
 //administrar usuario
 import EditarUsuario from './componentes/editar/editarUsuario.js'
@@ -15,6 +15,7 @@ import EditarModulo from './componentes/editar/editarModulo.js';
 import AsignarActividadModulo from './componentes/asignar/asignarActividadModulo.js';
 
 import RedireccionarUsuario from './componentes/redirecciones/RedireccionarUsuario.js';
+import ContenidoReportes from './componentes/reportes/ContenidoReportes.js';
 
 
 //estilos
@@ -100,6 +101,14 @@ render(){
 	 <Route exact path="/asignarActividadModulo" render={() => {
   	    return <div id="wrapper">
   	    <AsignarActividadModulo/>
+    </div>
+  	}}>
+  	</Route>
+
+	{/*Ruta para reportes */}
+	<Route exact path="/reportes" render={() => {
+  	    return <div id="wrapper">
+  	    <ContenidoReportes/>
     </div>
   	}}>
   	</Route>

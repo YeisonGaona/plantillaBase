@@ -74,7 +74,7 @@ class MenuLateral extends React.Component {
 					</a>
 				</li>
 				<li className="nav-item">
-					<a href="/Reportes" name="hoverReportes" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff}   className="list-group-item list-group-item-action text-light text-center" 
+					<a href="/reportes" name="hoverReportes" onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff}   className="list-group-item list-group-item-action text-light text-center" 
 					style={ this.state.hoverReportes ? fondoHover : fondoMenuLateral }>
 						<img src={documento} alt="" width="25" height="25" />
 						<br />
