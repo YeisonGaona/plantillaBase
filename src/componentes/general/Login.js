@@ -7,7 +7,13 @@ import '../../css/bootstrap.min.css'
 import '../../css/menu.css'
 import '../../css/registro.css'
 
+import {Button} from 'reactstrap';
+
 class Login extends React.Component {
+	pruebita = () => {
+		
+		this.props.cambiar('e');
+	}
 	render() {
 		return (
 			<div>
@@ -45,7 +51,7 @@ class Login extends React.Component {
 														<a href="/editar" id="forget-password" className="small" >¿Olvido su contraseña?</a>
 													</div>
 													<div className="col-sm-4">
-														<button className="btn btn-dark" style={fondoBoton} type="submit">Iniciar sesion</button>
+														<Button className="btn btn-dark" style={fondoBoton} onClick={this.pruebita}>Iniciar sesion</Button>
 													</div>
 												</div>
 											</form>

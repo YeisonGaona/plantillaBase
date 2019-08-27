@@ -37,7 +37,7 @@ class ContenidoAdminUsuario extends React.Component {
 	renderTableData() {
 		return this.state.post.map((post, index) => {
 			
-			const { cedula} = post //destructuring
+			const {cedula} = post //destructuring
 			return (
 				<Fila usuario={post} cambiar={this.props.cambiar} funcionModificar={this.props.funcionModificar} key={cedula} />
 			)
