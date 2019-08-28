@@ -11,7 +11,6 @@ import { Button } from 'reactstrap';
 
 //componentes
 import Barra from '../general/BarraDirecciones.js'
-import Fila from './FilaTablaUsuario.js'
 
 class ContenidoInicio extends React.Component {
 
@@ -19,47 +18,6 @@ class ContenidoInicio extends React.Component {
 		post: []
 	}
 
-	eventoBorrado = (evento) => {
-		evento.preventDefault();
-		console.log(this.state.post)
-	}
-
-
-
-	onChange = (evento) => {
-		this.setState({
-			[evento.target.name]: evento.target.value
-		});
-	}
-
-	async componentDidMount() {
-		const respuesta = await fetch('http://localhost:8080/SuperadminustradorESCOM-web/api/usu/');
-		const transformado = await respuesta.json();
-		this.setState({ post: transformado });
-		console.log(transformado);
-	}
-
-
-	renderTableData() {
-		return this.state.post.map((post, index) => {
-			const { cedula} = post //destructuring
-			return (
-				<Fila usuario={post} key={cedula} />
-			)
-		})
-
-	}
-
-	anadirTarea = (nombre, correo, cedula) => {
-		const nuevaTarea = {
-			nombre: nombre,
-			correo: correo,
-			cedula: cedula
-		}
-		this.setState({
-			post: [...this.state.post, nuevaTarea]
-		})
-	}
 
 	render() {
 		return (
@@ -91,21 +49,7 @@ class ContenidoInicio extends React.Component {
 					<div className="container shadow" style={fondoBarraSuperior}>
 						<br />
 						<div className="jumbotron p-1 jumbotron-fluid" style={fondoTabla}>
-							<table className="table table-hover table-bordered table-checkable" style={fondoBarraSuperior}>
-								<thead className="table table-hover table-striped col-md-12">
-									<tr>
-										<th> Logo </th>
-										<th> Nombre de modulo </th>
-										<th> Descripción de modulo  </th>
-										<th> Acción </th>
-									</tr>
-								</thead>
-								<tbody>
-									{
-										this.renderTableData()
-									}
-								</tbody>
-							</table>
+							<p>Contenido</p>
 						</div>
 					</div>
 				</div>
